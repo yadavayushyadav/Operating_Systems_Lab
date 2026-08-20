@@ -1,0 +1,7 @@
+Time taken to sharpen the image 1: 25357 microseconds
+Time taken to sharpen the image 2: 105165 microseconds
+Time taken to sharpen the image 3: 165486 microseconds
+Time taken to sharpen the image 4: 310888 microseconds
+Time taken to sharpen the image 5: 410679 microseconds
+Time taken to sharpen the image 6: 891836 microseconds
+Time taken to sharpen the image 7: 2426501 microseconds

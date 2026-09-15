@@ -130,7 +130,7 @@ void print_tick(int current_time, const vector<Process>& processes, const vector
 
 void print_schedule(const SimResult& result) {
     for (int cpu = 0; cpu < NUM_CPUS; ++cpu) {
-        cout << "CPU" << cpu << endl;
+        cout << "\nCPU" << cpu << endl;
         for (const Segment& s : result.schedule[cpu]) {
             cout << "P" << s.pid << "," << s.burst_number << "\t" << s.start << "\t" << s.end << endl;
         }

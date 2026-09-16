@@ -86,7 +86,7 @@ Multi-Level Feedback Queue scheduling\par}
 \vspace{0.7cm}
 {\large
 \begin{tabular}{@{}lcl@{}}
-Ayush Yadav Yadav & \quad--\quad & CS24BT001\\[2mm]
+Ayush Yadav       & \quad--\quad & CS24BT001\\[2mm]
 Trisham Bepari    & \quad--\quad & CS24BT022\\
 \end{tabular}\par}
 
@@ -392,19 +392,25 @@ do not, for three reasons:
 
 \section{How to Build and Run}
 
-All paths below are relative to the \texttt{lab3} directory of the submission, whose
-layout is:
+The submission has the following layout:
 
 \begin{lstlisting}
-lab3/
-  processes/
-    process1.txt ... process5.txt      workload description files
-  report/
-    report.tex                          this report
-  src/
-    single_processor.cpp                single-processor simulator (Part I)
-    dual_processor.cpp                  dual-processor simulator (Part II)
-    makefile                            build/run rules
+src/
+  single_processor.cpp                single-processor simulator (Part I)
+  dual_processor.cpp                  dual-processor simulator (Part II)
+  makefile                            build/run rules
+CS24BT001_CS24BT022_Assignment3_report.pdf    this report
+\end{lstlisting}
+
+The five workload description files provided with the assignment are not part of the
+submission. The makefile expects them, named \texttt{process1.txt} to
+\texttt{process5.txt}, in a \texttt{processes/} directory placed next to \texttt{src/}:
+
+\begin{lstlisting}
+processes/
+  process1.txt ... process5.txt       workload description files
+src/
+  ...
 \end{lstlisting}
 
 \textbf{Important:} the run commands are issued from inside the \texttt{src/} directory,
@@ -415,7 +421,7 @@ because the workload files are referred to with the relative path \texttt{../pro
 Change into the source directory first:
 
 \begin{lstlisting}
-cd lab3/src
+cd src
 \end{lstlisting}
 
 The makefile defines eight run targets --- one per algorithm for each simulator --- plus a
@@ -425,7 +431,7 @@ it is missing or older than its source file, so no separate build step is needed
 \paragraph{Single processor (Part I).}
 \begin{lstlisting}
 make run-fifo-single              # FIFO
-make run-round-robbin-single      # Round Robin
+make run-round-robin-single       # Round Robin
 make run-mlfq-no-boost-single     # MLFQ, boost disabled
 make run-mlfq-with-boost-single   # MLFQ, boost every 20 time units
 \end{lstlisting}
@@ -433,7 +439,7 @@ make run-mlfq-with-boost-single   # MLFQ, boost every 20 time units
 \paragraph{Dual processor (Part II).}
 \begin{lstlisting}
 make run-fifo-dual                # FIFO
-make run-round-robbin-dual        # Round Robin
+make run-round-robin-dual         # Round Robin
 make run-mlfq-no-boost-dual       # MLFQ, boost disabled
 make run-mlfq-with-boost-dual     # MLFQ, boost every 20 time units
 \end{lstlisting}
@@ -470,7 +476,7 @@ make run-fifo-single FILE_NUMBER=4
 make run-fifo-dual FILE_NUMBER=4
 
 # Round Robin on workload 5 with a time quantum of 8, on two processors
-make run-round-robbin-dual FILE_NUMBER=5 TIME_QUANTUM=8
+make run-round-robin-dual FILE_NUMBER=5 TIME_QUANTUM=8
 
 # MLFQ without boost on workload 2, one processor
 make run-mlfq-no-boost-single FILE_NUMBER=2
@@ -487,7 +493,7 @@ make clean
 
 \subsection{Running without the makefile}
 
-\paragraph{Step 1 --- compile.} From inside \texttt{lab3/src}:
+\paragraph{Step 1 --- compile.} From inside \texttt{src/}:
 
 \begin{lstlisting}
 g++ -g single_processor.cpp -o single_processor.out
@@ -588,12 +594,13 @@ same burst number appears more than once --- this is how preemption is visible i
 output. A gap between the end of one line and the start of the next indicates an
 \textbf{idle CPU}.
 
-\paragraph{Dual processor.} The output has one schedule block per processor, followed by
-the metrics, which include the run time of each processor:
+\paragraph{Dual processor.} The output has one schedule block per processor, each preceded
+by a blank line, followed by the metrics, which include the run time of each processor:
 
 \begin{lstlisting}
 CPU0
 P1,1	1	200
+
 CPU1
 P2,1	1	100
 P3,1	101	400
@@ -7064,7 +7071,7 @@ W5 & 14.1\% & 5.8\% & 9.8\% & 2.1\% & -3.13\% & +2.48\% \\
 
 Every chart in this section shows all five workloads on a single axis. Where the absolute
 values of the workloads differ too much to share an axis, the chart shows a relative
-quantity instead: a reduction, a speedup or a percentage point change.
+quantity instead: a reduction, a speedup or a percentage-point change.
 
 \begin{figure}[htbp]\centering\begin{tikzpicture}
 \begin{axis}[barstyle, ylabel={Reduction in avg TAT (\%)}, ymin=0]
@@ -7498,8 +7505,8 @@ such penalty to begin with, so it has less to gain.
 On workload 4 FIFO moves from first place to last: on one processor the order is FIFO $<$ RR $<$ MLFQ-WB $<$ MLFQ-NB, while
 on two it is RR $<$ MLFQ-WB $<$ MLFQ-NB $<$ FIFO. On workload 5 the boosted MLFQ moves from second place to last. The spread between the
 best and worst policy narrowed on every workload that has one: from 27.0\,\% to
-6.7\,\% on workload 1, from 10.0\,\% to 2.1\,\% on workload 4 and from 14.1\,\% to
-5.8\,\% on workload 5. With more processing capacity, the order in which processes are
+6.7\,\% on workload 1, from 13.7\,\% to 10.9\,\% on workload 2, from 10.0\,\% to 2.1\,\%
+on workload 4 and from 14.1\,\% to 5.8\,\% on workload 5. With more processing capacity, the order in which processes are
 served matters less, so the choice of scheduling policy matters less.
 
 \subsection{Utilisation falls: diminishing returns}
@@ -7523,8 +7530,8 @@ release the only processor.
 
 On one processor the boost improved MLFQ's average turnaround time by 2.71\,\% on workload 4
 and 3.13\,\% on workload 5. On two processors it improved workload 4 by only 0.41\,\% and
-made workload 5 2.48\,\% \emph{worse}. The boost is a remedy for starvation in the low
-priority queues; with a second processor there is much less starvation to remedy, while the
+made workload 5 2.48\,\% \emph{worse}. The boost is a remedy for starvation in the low-priority
+queues; with a second processor there is much less starvation to remedy, while the
 boost's cost --- discarding the priority information MLFQ has learned --- is unchanged.
 
 \subsection{Parameter tuning matters less}
@@ -7550,7 +7557,7 @@ In exchange, the second processor introduces migration: the preemptive policies 
 \toprule
 \textbf{Policy} & \textbf{One processor} & \textbf{Two processors} & \textbf{Effect of the second processor}\\
 \midrule
-FIFO & Best average TAT on every workload (tied on W3); worst worst-case and utilisation on W4 & Best average TAT on W1, W2, W5; worst on W4 & Smallest gains (6.9--47.6\,\%); only policy to reach $2\times$ speedup \\ \addlinespace
+FIFO & Best average TAT on every workload (tied on W3); highest worst-case turnaround and lowest utilisation on W4 & Best average TAT on W1, W2, W5; worst on W4 & Smallest gains (6.9--47.6\,\%); only policy to reach $2\times$ speedup \\ \addlinespace
 Round Robin & Fairest on W4 and W5; best utilisation on W4; worse average than FIFO & Best average TAT on W4 & Gains of 6.9--50.2\,\%, including the largest of all (W5); less sensitive to $q$ on most workloads \\ \addlinespace
 MLFQ (no boost) & Learns process behaviour; average close to Round Robin & Very close to Round Robin & Gains of 6.9--49.5\,\% \\ \addlinespace
 MLFQ (boost 20) & Boost improves average on W4 and W5 & Worst average TAT on W5 & The boost stops helping \\

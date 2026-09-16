@@ -12,7 +12,7 @@ dual_processor.out: dual_processor.cpp
 run-fifo-single: single_processor.out
 	./single_processor.out FIFO ../processes/process$(FILE_NUMBER).txt $(TRACE)
 
-run-round-robbin-single: single_processor.out
+run-round-robin-single: single_processor.out
 	./single_processor.out RR ../processes/process$(FILE_NUMBER).txt $(TIME_QUANTUM) $(TRACE)
 
 run-mlfq-no-boost-single: single_processor.out
@@ -24,7 +24,7 @@ run-mlfq-with-boost-single: single_processor.out
 run-fifo-dual: dual_processor.out
 	./dual_processor.out FIFO ../processes/process$(FILE_NUMBER).txt $(TRACE)
 
-run-round-robbin-dual: dual_processor.out
+run-round-robin-dual: dual_processor.out
 	./dual_processor.out RR ../processes/process$(FILE_NUMBER).txt $(TIME_QUANTUM) $(TRACE)
 
 run-mlfq-no-boost-dual: dual_processor.out

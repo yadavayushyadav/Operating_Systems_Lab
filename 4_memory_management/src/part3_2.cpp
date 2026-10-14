@@ -5,6 +5,7 @@
 #include <vector>
 #include <cstdint>
 #include <filesystem>
+#include <chrono>
 
 using namespace std;
 
@@ -114,7 +115,8 @@ int main(int argc, char * argv[]) {
 
     uint64_t pt_entries = NUM_PAGES_OUTER + (uint64_t)NUM_PAGES_INNER * inner_tables;
     uint64_t pt_bytes   = pt_entries * sizeof(int);
-    double util = 100.0 * next_free / pt_entries;
+    uint64_t pt_entries_accessed = inner_tables + next_free;     // outer entries used + inner entries used
+    double util = 100.0 * pt_entries_accessed / pt_entries;
 
     double hit_rate = 100.0 * total_tlb_hits / total_accesses;
 

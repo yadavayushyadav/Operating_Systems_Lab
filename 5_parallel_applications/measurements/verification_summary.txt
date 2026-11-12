@@ -1,0 +1,19 @@
+Comparison of every output with the original output of Lab 1, final build (g++ -O2 -falign-functions=64).
+Each line: Lab 1 image, pixels per message, runs -> result for the 11 outputs (part1 and both variants of part2_1, part2_2, part2_3, part3_1, part3_2).
+
+image 1.ppm, batch 997, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 2.ppm, batch 997, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 3.ppm, batch 997, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 4.ppm, batch 997, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 5.ppm, batch 997, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 6.ppm, batch 997, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 7.ppm, batch 997, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 1.ppm, batch 1, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 2.ppm, batch 1, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 1.ppm, batch 999999999, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 2.ppm, batch 999999999, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 3.ppm, batch 999999999, runs 100  ->  11 identical, 0 different, 0 not created yet
+image 1.ppm, batch 1, runs 1000  ->  11 identical, 0 different, 0 not created yet
+
+Link checks: 260 passed, 0 failed
+Outputs: 143 identical, 0 different

@@ -1,0 +1,234 @@
+===== make part1
+Image 			 : 	input.ppm (450 x 180)
+Runs 			 : 	1000
+File Read Time 		 : 	0.00382089 s
+S1 Time 		 : 	2.0579 s
+S2 Time 		 : 	0.683426 s
+S3 Time 		 : 	0.697597 s
+Processing Time 	 : 	3.43905 s
+File Write Time 	 : 	0.00212861 s
+Total Time 		 : 	3.45219 s
+===== make part2_1_variant1
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	1
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+S1 -> S2 Sent 		 : 	81000000 pixels, hash 12170038745284060307
+S1 -> S2 Received 	 : 	81000000 pixels, hash 12170038745284060307
+S1 -> S2 Check 		 : 	PASSED (received as sent, in the sent order)
+S2 -> S3 Sent 		 : 	81000000 pixels, hash 1901646794791207459
+S2 -> S3 Received 	 : 	81000000 pixels, hash 1901646794791207459
+S2 -> S3 Check 		 : 	PASSED (received as sent, in the sent order)
+File Read Time 		 : 	0.00391529 s
+S1 Finished After 	 : 	104.001 s
+S2 Finished After 	 : 	104.001 s
+S3 Finished After 	 : 	104.001 s
+Processing Time 	 : 	104.002 s
+File Write Time 	 : 	0.00242695 s
+Total Time 		 : 	104.011 s
+===== make part2_1_variant2
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	2
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+S1 -> S2 Sent 		 : 	810000 pixels, hash 16510668365919690495
+S1 -> S2 Received 	 : 	810000 pixels, hash 16510668365919690495
+S1 -> S2 Check 		 : 	PASSED (received as sent, in the sent order)
+S2 -> S3 Sent 		 : 	810000 pixels, hash 12032347268811867531
+S2 -> S3 Received 	 : 	810000 pixels, hash 12032347268811867531
+S2 -> S3 Check 		 : 	PASSED (received as sent, in the sent order)
+File Read Time 		 : 	0.00449347 s
+S1 Finished After 	 : 	2.43237 s
+S2 Finished After 	 : 	2.55518 s
+S3 Finished After 	 : 	2.5886 s
+Processing Time 	 : 	2.58871 s
+File Write Time 	 : 	0.00245422 s
+Total Time 		 : 	2.5984 s
+===== make part2_2_variant1
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	1
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+File Read Time 		 : 	0.00435393 s
+S1 Finished After 	 : 	59.8366 s
+S1 -> S2 Sent 		 : 	81000000 pixels, hash 12170038745284060307
+S1 -> S2 Received 	 : 	81000000 pixels, hash 12170038745284060307
+S1 -> S2 Check 		 : 	PASSED (received as sent, in the sent order)
+S2 Finished After 	 : 	59.8512 s
+S2 -> S3 Sent 		 : 	81000000 pixels, hash 1901646794791207459
+S2 -> S3 Received 	 : 	81000000 pixels, hash 1901646794791207459
+S2 -> S3 Check 		 : 	PASSED (received as sent, in the sent order)
+S3 Finished After 	 : 	59.8511 s
+Processing Time 	 : 	59.8511 s
+File Write Time 	 : 	0.00290876 s
+Total Time 		 : 	59.859 s
+===== make part2_2_variant2
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	2
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+File Read Time 		 : 	0.00467541 s
+S1 Finished After 	 : 	2.2386 s
+S1 -> S2 Sent 		 : 	810000 pixels, hash 16510668365919690495
+S1 -> S2 Received 	 : 	810000 pixels, hash 16510668365919690495
+S1 -> S2 Check 		 : 	PASSED (received as sent, in the sent order)
+S2 Finished After 	 : 	2.28024 s
+S2 -> S3 Sent 		 : 	810000 pixels, hash 12032347268811867531
+S2 -> S3 Received 	 : 	810000 pixels, hash 12032347268811867531
+S2 -> S3 Check 		 : 	PASSED (received as sent, in the sent order)
+S3 Finished After 	 : 	2.31014 s
+Processing Time 	 : 	2.31014 s
+File Write Time 	 : 	0.00207111 s
+Total Time 		 : 	2.31757 s
+===== make part2_3_variant1
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	1
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+File Read Time 		 : 	0.00394817 s
+S2 Finished After 	 : 	85.3396 s
+S1 Finished After 	 : 	85.3396 s
+S3 Finished After 	 : 	85.3396 s
+Processing Time 	 : 	85.3396 s
+File Write Time 	 : 	0.00390171 s
+S1 -> S2 Sent 		 : 	81000000 pixels, hash 12170038745284060307
+S1 -> S2 Received 	 : 	81000000 pixels, hash 12170038745284060307
+S1 -> S2 Check 		 : 	PASSED (received as sent, in the sent order)
+S2 -> S3 Sent 		 : 	81000000 pixels, hash 1901646794791207459
+S2 -> S3 Received 	 : 	81000000 pixels, hash 1901646794791207459
+S2 -> S3 Check 		 : 	PASSED (received as sent, in the sent order)
+Total Time 		 : 	85.3484 s
+===== make part2_3_variant2
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	2
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+File Read Time 		 : 	0.00496147 s
+S1 Finished After 	 : 	2.20755 s
+S2 Finished After 	 : 	2.25875 s
+S3 Finished After 	 : 	2.29295 s
+Processing Time 	 : 	2.29295 s
+File Write Time 	 : 	0.00305419 s
+S1 -> S2 Sent 		 : 	810000 pixels, hash 16510668365919690495
+S1 -> S2 Received 	 : 	810000 pixels, hash 16510668365919690495
+S1 -> S2 Check 		 : 	PASSED (received as sent, in the sent order)
+S2 -> S3 Sent 		 : 	810000 pixels, hash 12032347268811867531
+S2 -> S3 Received 	 : 	810000 pixels, hash 12032347268811867531
+S2 -> S3 Check 		 : 	PASSED (received as sent, in the sent order)
+Total Time 		 : 	2.30188 s
+===== make part3_1_variant1_A   and   make part3_1_variant1_B
+Connected to computer A at 127.0.0.1, port 12345
+Image 			 : 	450 x 180 (received from computer A)
+Variant 		 : 	1
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+A -> B Sent 		 : 	81000000 pixels, hash 1901646794791207459
+A -> B Received 	 : 	81000000 pixels, hash 1901646794791207459
+A -> B Check 		 : 	PASSED (received as sent, in the sent order)
+Processing Time 	 : 	48.6696 s
+File Write Time 	 : 	0.00235284 s
+Total Time 		 : 	48.6723 s
+----- computer A printed:
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	1
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+File Read Time 		 : 	0.00429084 s
+Waiting for computer B on port 12345 ...
+Computer B connected from 127.0.0.1
+A -> B Sent 		 : 	81000000 pixels, hash 1901646794791207459
+A -> B Check 		 : 	PASSED (computer B received them as sent, in the sent order)
+A Finished After 	 : 	48.6685 s
+Processing Time 	 : 	48.6686 s
+Total Time 		 : 	49.1769 s (includes waiting for computer B to connect)
+===== make part3_1_variant2_A   and   make part3_1_variant2_B
+Connected to computer A at 127.0.0.1, port 12345
+Image 			 : 	450 x 180 (received from computer A)
+Variant 		 : 	2
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+A -> B Sent 		 : 	810000 pixels, hash 12032347268811867531
+A -> B Received 	 : 	810000 pixels, hash 12032347268811867531
+A -> B Check 		 : 	PASSED (received as sent, in the sent order)
+Processing Time 	 : 	2.56924 s
+File Write Time 	 : 	0.00212497 s
+Total Time 		 : 	2.5718 s
+----- computer A printed:
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	2
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+File Read Time 		 : 	0.00455073 s
+Waiting for computer B on port 12345 ...
+Computer B connected from 127.0.0.1
+A -> B Sent 		 : 	810000 pixels, hash 12032347268811867531
+A -> B Check 		 : 	PASSED (computer B received them as sent, in the sent order)
+A Finished After 	 : 	2.54544 s
+Processing Time 	 : 	2.56917 s
+Total Time 		 : 	3.077 s (includes waiting for computer B to connect)
+===== make part3_2_variant1_A   and   make part3_2_variant1_B
+Connected to computer A at 127.0.0.1, port 12345
+Image 			 : 	450 x 180 (received from computer A)
+Variant 		 : 	1
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+A -> B Sent 		 : 	81000000 pixels, hash 12170038745284060307
+A -> B Received 	 : 	81000000 pixels, hash 12170038745284060307
+A -> B Check 		 : 	PASSED (received as sent, in the sent order)
+Processing Time 	 : 	49.5041 s
+File Write Time 	 : 	0.00268032 s
+Total Time 		 : 	49.5072 s
+----- computer A printed:
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	1
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+File Read Time 		 : 	0.00373646 s
+Waiting for computer B on port 12345 ...
+Computer B connected from 127.0.0.1
+A -> B Sent 		 : 	81000000 pixels, hash 12170038745284060307
+A -> B Check 		 : 	PASSED (computer B received them as sent, in the sent order)
+A Finished After 	 : 	49.5034 s
+Processing Time 	 : 	49.504 s
+Total Time 		 : 	50.0121 s (includes waiting for computer B to connect)
+===== make part3_2_variant2_A   and   make part3_2_variant2_B
+Connected to computer A at 127.0.0.1, port 12345
+Image 			 : 	450 x 180 (received from computer A)
+Variant 		 : 	2
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+A -> B Sent 		 : 	810000 pixels, hash 16510668365919690495
+A -> B Received 	 : 	810000 pixels, hash 16510668365919690495
+A -> B Check 		 : 	PASSED (received as sent, in the sent order)
+Processing Time 	 : 	2.38219 s
+File Write Time 	 : 	0.00273672 s
+Total Time 		 : 	2.38535 s
+----- computer A printed:
+Image 			 : 	input.ppm (450 x 180)
+Variant 		 : 	2
+Runs 			 : 	1000
+Batch 			 : 	1 pixel(s) per message
+File Read Time 		 : 	0.00494426 s
+Waiting for computer B on port 12345 ...
+Computer B connected from 127.0.0.1
+A -> B Sent 		 : 	810000 pixels, hash 16510668365919690495
+A -> B Check 		 : 	PASSED (computer B received them as sent, in the sent order)
+A Finished After 	 : 	2.3514 s
+Processing Time 	 : 	2.38217 s
+Total Time 		 : 	2.88917 s (includes waiting for computer B to connect)
+===== comparison with Lab 1
+Lab 1 output : lab1_output.ppm (243015 bytes, md5 cf3bb55d59f95b3f9a79c3f4a71ebfc0)
+
+output_part1.ppm               : IDENTICAL to the Lab 1 output
+output_part2_1_variant1.ppm    : IDENTICAL to the Lab 1 output
+output_part2_1_variant2.ppm    : IDENTICAL to the Lab 1 output
+output_part2_2_variant1.ppm    : IDENTICAL to the Lab 1 output
+output_part2_2_variant2.ppm    : IDENTICAL to the Lab 1 output
+output_part2_3_variant1.ppm    : IDENTICAL to the Lab 1 output
+output_part2_3_variant2.ppm    : IDENTICAL to the Lab 1 output
+output_part3_1_variant1.ppm    : IDENTICAL to the Lab 1 output
+output_part3_1_variant2.ppm    : IDENTICAL to the Lab 1 output
+output_part3_2_variant1.ppm    : IDENTICAL to the Lab 1 output
+output_part3_2_variant2.ppm    : IDENTICAL to the Lab 1 output
+
+11 identical, 0 different, 0 not created yet
